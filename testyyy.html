@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PEDPRO MENU FREE V2</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #1a0033; /* พื้นหลังม่วงเข้มเหมือนในภาพ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+  }
+  .menu {
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    width: 260px;
+    font-size: 14px;
+  }
+  .menu h3 {
+    text-align: center;
+    margin: 0 0 12px;
+    font-size: 16px;
+  }
+  .row {
+    margin: 6px 0;
+  }
+  .row label {
+    margin-left: 5px;
+  }
+  input[type="range"] {
+    width: 100%;
+  }
+  .slider-row {
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+  <div class="menu">
+    <h3>PEDPRO MENU FREE V2</h3>
+
+    <div class="row"><input type="checkbox" checked> <label>เปิดการทำงานของMENU</label></div>
+    <div class="row"><input type="checkbox" checked> <label>AIMBOT 93%</label></div>
+    <div class="row"><input type="checkbox" checked> <label>AIMBOT 82%</label></div>
+    <div class="row"><input type="checkbox" checked> <label>Block Report</label></div>
+
+    <div class="slider-row">
+      <label>ปรับระดับสมบูรณ์ของจอ <span id="val1">20</span></label>
+      <input type="range" id="r1" min="0" max="100" value="20">
+    </div>
+
+    <div class="slider-row">
+      <label>ปรับความไวจอ: <span id="val2">59</span></label>
+      <input type="range" id="r2" min="0" max="100" value="59">
+    </div>
+
+    <div class="slider-row">
+      <label>ปรับอัตราการและ: <span id="val3">50</span></label>
+      <input type="range" id="r3" min="0" max="100" value="50">
+    </div>
+
+    <div class="row"><input type="checkbox" checked> <label>กันแบน</label></div>
+    <div class="row"><input type="checkbox"> <label>กันรายงาน</label></div>
+    <div class="row"><input type="checkbox"> <label>กันดำ</label></div>
+  </div>
+
+<script>
+  const r1 = document.getElementById("r1");
+  const r2 = document.getElementById("r2");
+  const r3 = document.getElementById("r3");
+  const val1 = document.getElementById("val1");
+  const val2 = document.getElementById("val2");
+  const val3 = document.getElementById("val3");
+
+  r1.addEventListener("input", ()=> val1.textContent = r1.value);
+  r2.addEventListener("input", ()=> val2.textContent = r2.value);
+  r3.addEventListener("input", ()=> val3.textContent = r3.value);
+</script>
+</body>
+</html>
